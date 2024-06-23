@@ -1,0 +1,12 @@
+const express = require('express')
+const mongoose = require('mongoose')
+const morgan = require('morgan')
+mongoose.connect('mongodb+srv://vivekgaur881:ajjuvivek123@cluster0.c7edoti.mongodb.net/').then(console.log("database connected")).catch((error)=>{console.log("error in connecting to db")})
+const app = express()
+app.use(express.json())
+app.use(morgan('dev'))
+app.use('/auth',require('./routes/auth.route'))
+app.use('/api',require('./routes/api.route'))
+app.listen(8800 , ()=>{
+    console.log("server listening")
+})
