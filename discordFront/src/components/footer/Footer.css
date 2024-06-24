@@ -1,0 +1,61 @@
+.homeFooter{
+    background-color: #23272A;
+    color: white;
+    height: 100%;
+    .footerTop{
+         display: flex;
+        .social{
+            margin-top: 26vh;
+            margin-left: 4%;
+            /* background-color: aliceblue; */
+            width: 18vw;
+            .socialImages{
+            margin-right: 10%;
+            height: 4.5vh;
+            }
+        }
+        .footerLists{
+            margin-top: 12vh;
+            display: flex;
+            min-width: fit-content;
+            gap: 5vw;
+            margin-left: 23%;
+            font-family: Nunito;
+            .listHeading{
+                color: #404EED;
+                margin-bottom: 9%;
+            }
+            .listContent{
+                line-height: 33px;
+            }
+        }
+    }
+    .line{
+        border-color: #404EED;
+        width: 85%;
+        margin-left: 7%;
+    }
+    .footerEnd{
+        .title{
+            float: left;
+            display: flex;
+            font-size: x-large;
+            margin-left: 3%;
+            align-items:center;
+        }
+        .loginBtn{
+            float: right;
+            width: 9vw;
+            height: 4.5vh;
+            margin-right: 3%;
+            color: white;
+            outline: none;
+            cursor: pointer;
+            margin-top: 0.5%; 
+            border-radius: 15px;
+            border-style: none;
+            min-width: fit-content;
+            background-color: #404EED;
+        }
+    }
+}
