@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
+import Footer from '../components/footer/Footer'
+import Login from '../components/login/Login'
 export default function Home() {
+  const [loginPopUp, showLoginPopUp] = useState(false)
   return (
     <div className='home'>
       <div className='homeBanner'>
@@ -18,7 +21,8 @@ export default function Home() {
               <span>Blog</span>
               <span>Careers</span>
           </div>
-          <button className='loginBtn'>Sign In</button>
+          <button className='loginBtn' onClick={()=>{showLoginPopUp(!loginPopUp)}}>Sign In</button>
+          {loginPopUp && <Login/>}
         </div>
         <div className='banner'>
             <img src='/images/pointgirl.png' className = 'pointgirl' alt="" />
@@ -69,6 +73,7 @@ export default function Home() {
         </div>
         <img src="/images/banner4.png" alt="" className='banner2img'/>
       </div>
+      <Footer/>
     </div>
   )
 }
