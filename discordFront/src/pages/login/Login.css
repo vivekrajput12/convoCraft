@@ -1,0 +1,120 @@
+.loginFullPage{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color:rgb(255, 255, 255) !important;
+    z-index: 3;
+    .loginFullPageContainer{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        .loginContainer{
+            display: flex;
+            .login{
+                z-index: 2;
+                background-color: #23272A;
+                width: 26vw;
+                height: 65vh;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                line-height: 34px;
+                box-shadow: rgba(60, 64, 67, 9.3) 0px 1px 2px 0px, rgba(60, 64, 67, 4.15) 0px 2px 6px 2px;
+                .loginFormHeading{
+                    /* text-align: center; */
+                    overflow: hidden;
+                    margin-top: 33%;
+                    font-size: 31px;
+                    font-weight: bold;
+                }
+                .loginFromLable{
+                    /* margin-left: 8%; */
+                }
+                .loginFromLableInput{
+                    width: 80%;
+                    /* margin-left: 8%; */
+                    font-size: 14px;
+                    border-radius: 2px;
+                    outline: none;
+                    padding: 7px;
+                    border: none;
+                }
+                .forgetPassword{
+                    font-size: small;
+                    margin-left: 69%;
+                    cursor: pointer;
+                    &:hover{
+                        color:#404EED;
+                    }
+                }
+                .submitBtn{
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    padding: 3%;
+                    &.loginBtn{
+                        cursor: pointer;
+                        /* margin-top: 2%; */
+                        width: 18vw;
+                        min-width: fit-content;
+                        font-size: 16px;
+                        padding: 6px;
+                        &.googleBtn{
+                            /* width: 50%;
+                            margin-top:0;
+                            padding: 10px; */
+                            background-color: white;
+                            color: black;
+                        }
+                        /* margin-top: 23px; */
+                        background-color: #404EED;
+                        color: white;
+                        border: none;
+                        transition: background-color 0.5s;
+                        &:hover{
+                            background-color: #7780e2;
+                            color: black;
+                        }
+                    }
+                }
+                .loginOr{
+                    text-align: center;
+                }
+                .loginSocial{
+                    margin-top: 2%;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    gap: 17px;
+                    &.socialImages{
+                        height: 4.5vh;
+                        }
+                }
+                @media screen and (max-width:1250px) {
+                    width: 40vw;
+                    /* height: 55vh; */
+                    /* margin-left: 30%; */
+                }
+                /* @media screen and (max-width:1130px) {
+                    width: 20vw;
+                } */
+            }
+            .loginRightSide{
+                background-color: #404EED;
+                width: 26vw;
+            }
+        }
+        
+    }
+}
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .loginInputContainer{
+    margin-left: 14%;
+    display: grid;
+  }

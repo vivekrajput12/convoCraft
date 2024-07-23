@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './Home.css'
 
-import Login from '../../components/login/Login'
+// import Login from '../../components/login/Login'
 import Footer from '../../components/footer/Footer'
+import { useNavigate, redirect } from 'react-router-dom'
 export default function Home() {
   const [showLogin , setShowLogin] = useState(false)
   const [blur , setBlur] = useState(false)
@@ -10,13 +11,17 @@ export default function Home() {
     setShowLogin(!showLogin)
     setBlur(!blur)
   }
+  const handleCancelBtn = ()=>{
+    setShowLogin(false)
+  }
+  const navigate = useNavigate();
   return (
-    <div className={`home ${blur} ? 'blur': '' `}>
+    <div className={`home ${blur ? 'blur' : ''}`}>
       <div className='homeBanner'>
         <div className='homeNavigation'>
           <div className='title'>
             <img src = '/images/icons8-discord-48.png'/>
-            <span>Discord</span>
+            <span>convoCraft</span>
           </div>
           <div className='homeNavbar'>
               <span>Download</span>
@@ -27,9 +32,9 @@ export default function Home() {
               <span>Blog</span>
               <span>Careers</span>
           </div>
-          <button onClick={()=>handleLogin()} className='loginBtn'>Sign In</button>
+          <button onClick={()=>navigate('/login')} className='loginBtn'>Sign In</button>
         </div>
-        {showLogin && <Login />}
+        {showLogin && <Login handleCancelBtn={handleCancelBtn}/>}
         <div className='banner'>
             <img src='/images/pointgirl.png' className = 'pointgirl' alt="" />
           <div className='bannerLeft'>
@@ -48,7 +53,7 @@ export default function Home() {
           <h1 className='banner2title'>
           Create an invite-only place where you belong
           </h1>
-          <p className='banner2content'>Discord servers are organised into topic-based channels where you can collaborate, share and just talk about your day without clogging up a group chat.</p>
+          <p className='banner2content'>convoCraft servers are organised into topic-based channels where you can collaborate, share and just talk about your day without clogging up a group chat.</p>
         </div>
       </div>
       <div className='homeBanner3'>
@@ -79,7 +84,6 @@ export default function Home() {
         <img src="/images/banner4.png" alt="" className='banner4Img'/>
       </div>
       <Footer/>
-      <Login />
     </div>
   )
 }

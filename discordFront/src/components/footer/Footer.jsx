@@ -57,7 +57,7 @@ export default function Footer() {
         <div className='footerEnd'>
             <div className='title'>
                 <img src = '/images/icons8-discord-48.png'/>
-                <span>Discord</span>
+                <span>convoCraft</span>
             </div>
             <button className='loginBtn'>Sign In</button>
         </div>
