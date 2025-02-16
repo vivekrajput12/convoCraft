@@ -1,0 +1,20 @@
+.fullHeightScreen{
+    height: 100vh;
+}
+.displayFlex{
+    display: flex;
+}
+.minFullHeight{
+    min-height: 100vh;
+}
+.overflowHidden{
+    overflow: hidden;
+}
+.posRelative{
+    position: relative;
+}
+.displayFlexCenterAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

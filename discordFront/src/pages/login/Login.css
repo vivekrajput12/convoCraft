@@ -2,43 +2,45 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color:rgb(255, 255, 255) !important;
     z-index: 3;
+    /* background-image: url(/images/loginWallpaper.jpg);
+     */
+    /* background: linear-gradient(to bottom, #b4edff, #004d8d); */
+    background-image: linear-gradient(rgb(0, 73, 96), rgb(0, 62, 113));
     .loginFullPageContainer{
         display: flex;
+        flex-direction: column;
         height: 100%;
         justify-content: center;
         align-items: center;
         .loginContainer{
             display: flex;
+            border-radius: 9px;
             .login{
                 z-index: 2;
                 background-color: #23272A;
                 width: 26vw;
-                height: 65vh;
+                padding: 60px 0;
+                height: auto;
                 color: white;
+                justify-content: center;
                 display: flex;
                 flex-direction: column;
                 line-height: 34px;
                 box-shadow: rgba(60, 64, 67, 9.3) 0px 1px 2px 0px, rgba(60, 64, 67, 4.15) 0px 2px 6px 2px;
                 .loginFormHeading{
-                    /* text-align: center; */
                     overflow: hidden;
-                    margin-top: 33%;
                     font-size: 31px;
                     font-weight: bold;
                 }
-                .loginFromLable{
-                    /* margin-left: 8%; */
-                }
                 .loginFromLableInput{
                     width: 80%;
-                    /* margin-left: 8%; */
                     font-size: 14px;
-                    border-radius: 2px;
+                    border-radius: 4px;
                     outline: none;
-                    padding: 7px;
+                    padding: 4px 10px;
                     border: none;
+                    height: 30px;
                 }
                 .forgetPassword{
                     font-size: small;
@@ -55,21 +57,22 @@
                     padding: 3%;
                     &.loginBtn{
                         cursor: pointer;
-                        /* margin-top: 2%; */
                         width: 18vw;
                         min-width: fit-content;
                         font-size: 16px;
-                        padding: 6px;
+                        font-weight: 600;
+                        /* padding: 6px; */
                         &.googleBtn{
-                            /* width: 50%;
-                            margin-top:0;
-                            padding: 10px; */
                             background-color: white;
                             color: black;
+                            .googleImage{
+                                width: 1vw;
+                            }
                         }
-                        /* margin-top: 23px; */
                         background-color: #404EED;
                         color: white;
+                        padding: 11px;
+                        border-radius: 4px;
                         border: none;
                         transition: background-color 0.5s;
                         &:hover{
@@ -87,23 +90,29 @@
                     display: flex;
                     justify-content: center;
                     text-align: center;
-                    gap: 17px;
+                    /* gap: 17px; */
                     &.socialImages{
                         height: 4.5vh;
                         }
                 }
                 @media screen and (max-width:1250px) {
                     width: 40vw;
-                    /* height: 55vh; */
-                    /* margin-left: 30%; */
                 }
-                /* @media screen and (max-width:1130px) {
-                    width: 20vw;
-                } */
+                @media screen and (max-width:700px) {
+                    width: 59vw;
+                }
             }
             .loginRightSide{
-                background-color: #404EED;
-                width: 26vw;
+                background-color: white;
+                /* width: 26vw; */
+                .loginPageImage{
+                    /* width: 26vw; */
+                    height: 40vh;
+                    margin-top: 22%;
+                }
+                @media screen and (max-width:700px) {
+                    display: none;
+                }
             }
         }
         
@@ -118,3 +127,24 @@
     margin-left: 14%;
     display: grid;
   }
+  a{
+    text-decoration: none;
+  }
+  .ancherTagRegister{
+    color: red;
+    cursor: pointer;
+}
+.loginPageNavigationbtn{
+    position: absolute;
+    cursor: pointer;
+    width: 8vw;
+    min-width: fit-content;
+    font-size: 16px;
+    padding: 6px;
+    border: none;
+    border-radius: 9px;
+    &:hover{
+        background-color: #7780e2;
+        color: black;
+    }
+}
