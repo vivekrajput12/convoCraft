@@ -4,6 +4,18 @@
 .displayFlex{
     display: flex;
 }
+.displayFlexVerticallyAlign{
+    display: flex;
+    align-items: center;
+}
+.justifyContentSpaceBetween{
+    justify-content: space-between;
+}
+.displayFlexCenterAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .minFullHeight{
     min-height: 100vh;
 }
@@ -13,8 +25,32 @@
 .posRelative{
     position: relative;
 }
-.displayFlexCenterAlign{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.downArrow{
+    width: 18px;
+    height: 18px;
+    background-image: url('/images/downArrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.downArrow.active{
+    background-image: url('/images/crossIcon.svg');
+}
+.flRight{
+    float: right;
+}
+.blueTxt{
+    color: rgb(143 143 255);
+}
+.customOverLay{
+    position: absolute;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 64%);
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: -76px;
+}
+.overflowUnset{
+    overflow: unset;
 }

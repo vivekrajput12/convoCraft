@@ -1,11 +1,12 @@
 import React from 'react'
 import NavBar from '../../../components/navBar'
-
+import {ChannelNav} from './channelNav'
+import { ChatMainBox } from './chatMainBox'
 export const RightMainArea = () => {
   return (
-    <div class = 'rightMainBox'>
-      <NavBar/>
-      <div>RightMainArea</div>
+    <div className = 'rightMainBox displayFlex overflowUnset'>
+      <ChannelNav/>
+      <ChatMainBox/>
     </div>
   )
 }

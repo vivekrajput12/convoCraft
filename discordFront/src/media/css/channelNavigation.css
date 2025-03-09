@@ -1,0 +1,39 @@
+.channelContainer{
+    background-color: #2b2d31;
+    overflow: visible;
+.channelOptionsContainer{
+    position: relative;
+    overflow: visible;
+    .channelOptions{
+        background-color: #2b2d31;
+        padding: 12px 16px;
+        color: white;
+        width: 200px;
+        &:hover{
+            background-color: #3a3c3f;
+        }
+    }
+    .channelOptionList{
+        color: white;
+        position: absolute;
+        left: 7px;
+        top: 48px;
+        background-color: #111214;
+        width: 204px;
+        padding: 6px;
+        border-radius: 3px;
+        li{
+            padding: 6px 8px;
+            span{
+                font-size: 14px;
+            }
+            &:hover{
+                background-color: rgb(87, 87, 211);
+            }
+        }
+        .itemIcon{
+            width: 20px;
+        }
+    }
+}
+}

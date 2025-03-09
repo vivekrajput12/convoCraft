@@ -1,0 +1,12 @@
+.searchFilter{
+    input{
+    background-color: #1e1f22;
+    border: none;
+    padding: 5px 0 5px 5px;
+    border-radius: 4px;
+    }   
+}
+.centerSerachBoxContainer{
+    position: relative;
+    z-index: 101;
+}
